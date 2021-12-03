@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">ProyectoFinal</string>
-    <string name="title_home">Home</string>
-    <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
+    <string name="title_home">Portada</string>
+    <string name="title_dashboard">Sensores</string>
+    <string name="title_notifications">Información</string>
 </resources>
