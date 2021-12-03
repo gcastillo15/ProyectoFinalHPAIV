@@ -18,6 +18,7 @@ import androidx.lifecycle.ViewModelProvider;
 import com.example.proyectofinal.R;
 import com.example.proyectofinal.RotationVectorSensor;
 import com.example.proyectofinal.databinding.FragmentDashboardBinding;
+import com.example.proyectofinal.ui.GyroscopeSensor;
 
 public class DashboardFragment extends Fragment {
 
@@ -53,7 +54,7 @@ public class DashboardFragment extends Fragment {
             @Override
             public void onClick(View v) {
 
-                Intent i = new Intent(root.getContext(), RotationVectorSensor.class);
+                Intent i = new Intent(root.getContext(), GyroscopeSensor.class);
                 startActivity(i);
             }
         });
