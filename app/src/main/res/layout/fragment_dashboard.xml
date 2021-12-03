@@ -6,36 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".ui.dashboard.DashboardFragment">
 
-    <ImageButton
-        android:id="@+id/b3"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="54dp"
-        android:layout_marginEnd="54dp"
-        android:layout_marginBottom="88dp"
-        android:scaleType="fitXY"
-        android:contentDescription="Vector Rotacion"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/b2"
-        tools:src="@drawable/vecrotacion" />
-
-    <ImageButton
-        android:id="@+id/b2"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="54dp"
-        android:layout_marginEnd="54dp"
-        android:layout_marginBottom="33dp"
-        android:scaleType="fitXY"
-        android:contentDescription="Giroscopio"
-        app:layout_constraintBottom_toTopOf="@+id/b3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/b1"
-        tools:src="@drawable/giroscopio" />
-
     <TextView
         android:id="@+id/text_dashboard"
         android:layout_width="0dp"
@@ -43,7 +13,7 @@
         android:layout_marginStart="6dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="6dp"
-        android:layout_marginBottom="32dp"
+        android:layout_marginBottom="52dp"
         android:textAlignment="center"
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/b1"
@@ -55,14 +25,45 @@
         android:id="@+id/b1"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginStart="54dp"
-        android:layout_marginEnd="54dp"
-        android:layout_marginBottom="33dp"
+        android:layout_marginStart="46dp"
+        android:layout_marginEnd="46dp"
+        android:layout_marginBottom="36dp"
+        android:contentDescription="bproximidad"
         android:scaleType="fitXY"
-        android:contentDescription="Proximidad"
+        android:src="@drawable/proximidad"
         app:layout_constraintBottom_toTopOf="@+id/b2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text_dashboard"
-        tools:src="@drawable/proximidad" />
+        app:layout_constraintTop_toBottomOf="@+id/text_dashboard" />
+
+    <ImageButton
+        android:id="@+id/b2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="46dp"
+        android:layout_marginEnd="46dp"
+        android:layout_marginBottom="22dp"
+        android:contentDescription="bgiroscopio"
+        android:scaleType="fitXY"
+        android:src="@drawable/giroscopio"
+        app:layout_constraintBottom_toTopOf="@+id/b3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/b1" />
+
+    <ImageButton
+        android:id="@+id/b3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="46dp"
+        android:layout_marginEnd="46dp"
+        android:layout_marginBottom="34dp"
+        android:contentDescription="bvecrotacion"
+        android:scaleType="fitXY"
+        android:src="@drawable/vecrotacion"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/b2" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
