@@ -9,8 +9,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ProyectoFinal">
+        <uses-feature
+            android:name="android.hardware.sensor.proximity"
+            android:required="true" />
+        <uses-feature
+            android:name="android.hardware.sensor.gyroscope"
+            android:required="true" />
         <activity
-            android:name=".ui.GyroscopeSensor"
+            android:name=".ProximitySensor"
+            android:exported="true" />
+        <activity
+            android:name=".GyroscopeSensor"
             android:exported="true" />
         <activity
             android:name=".RotationVectorSensor"

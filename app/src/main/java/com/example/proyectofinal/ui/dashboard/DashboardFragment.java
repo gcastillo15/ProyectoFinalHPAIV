@@ -6,7 +6,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -15,10 +14,11 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
+import com.example.proyectofinal.ProximitySensor;
 import com.example.proyectofinal.R;
 import com.example.proyectofinal.RotationVectorSensor;
 import com.example.proyectofinal.databinding.FragmentDashboardBinding;
-import com.example.proyectofinal.ui.GyroscopeSensor;
+import com.example.proyectofinal.GyroscopeSensor;
 
 public class DashboardFragment extends Fragment {
 
@@ -44,8 +44,7 @@ public class DashboardFragment extends Fragment {
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                Intent i = new Intent(root.getContext(), RotationVectorSensor.class);
+                Intent i = new Intent(root.getContext(), ProximitySensor.class);
                 startActivity(i);
             }
         });
@@ -53,7 +52,6 @@ public class DashboardFragment extends Fragment {
         b2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 Intent i = new Intent(root.getContext(), GyroscopeSensor.class);
                 startActivity(i);
             }
@@ -63,7 +61,6 @@ public class DashboardFragment extends Fragment {
         b3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 Intent i = new Intent(root.getContext(), RotationVectorSensor.class);
                 startActivity(i);
             }
