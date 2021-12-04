@@ -14,15 +14,18 @@ import android.widget.Button;
 import android.widget.Toast;
 
 public class ProximitySensor extends AppCompatActivity {
+
     private SensorManager sm;
     private Sensor PROXSensor;
     private SensorEventListener PROXSensorListener;
     Button rgrsar;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_proximity_sensor);
+
         sm = (SensorManager) getSystemService(SENSOR_SERVICE);
         PROXSensor= sm.getDefaultSensor(Sensor.TYPE_PROXIMITY);
         rgrsar = findViewById(R.id.btnregresar);
@@ -46,6 +49,7 @@ public class ProximitySensor extends AppCompatActivity {
             public void onSensorChanged(SensorEvent sensorEvent) {
                 if(sensorEvent.values[0] < PROXSensor.getMaximumRange()) {
                     getWindow().getDecorView().setBackgroundColor(Color.BLUE);
+
                 }
                 else  {
                     getWindow().getDecorView().setBackgroundColor(Color.YELLOW);

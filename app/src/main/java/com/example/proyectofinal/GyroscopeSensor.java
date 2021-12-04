@@ -22,6 +22,7 @@ public class GyroscopeSensor extends AppCompatActivity {
     private Sensor gyroscopeSensor;
     private SensorEventListener gyroscopeSensorListener;
     Button regresar;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
