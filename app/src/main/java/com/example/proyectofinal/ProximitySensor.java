@@ -36,7 +36,7 @@ public class ProximitySensor extends AppCompatActivity {
         });
 
         if (PROXSensor == null) {
-            Toast.makeText(this, "This device hasn´t Gyroscope", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "This device hasn´t Proximity", Toast.LENGTH_SHORT).show();
             finish();
         }
 
@@ -46,20 +46,16 @@ public class ProximitySensor extends AppCompatActivity {
             public void onSensorChanged(SensorEvent sensorEvent) {
                 if(sensorEvent.values[0] < PROXSensor.getMaximumRange()) {
                     getWindow().getDecorView().setBackgroundColor(Color.BLUE);
-
-
-                } else  { // clockwise
+                }
+                else  {
                     getWindow().getDecorView().setBackgroundColor(Color.YELLOW);
-
-                }}
+                }
+            }
             @Override
             public void onAccuracyChanged(Sensor sensor, int i) {
             }
         };
-
-
-    }
-
+}
     // Register the listener
     @Override
     protected void onResume() {
@@ -71,4 +67,4 @@ public class ProximitySensor extends AppCompatActivity {
         super.onPause();
         sm.unregisterListener(PROXSensorListener);
     }
-    }
+}
