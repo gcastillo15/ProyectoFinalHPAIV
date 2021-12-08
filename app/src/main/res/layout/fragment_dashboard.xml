@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#B483ECF8"
+    android:background="#808ECAE6"
     tools:context=".ui.dashboard.DashboardFragment">
 
     <TextView
@@ -16,11 +16,13 @@
         android:layout_marginEnd="6dp"
         android:layout_marginBottom="17dp"
         android:textAlignment="center"
+        android:textColor="#050505"
         android:textIsSelectable="false"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/b1"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
