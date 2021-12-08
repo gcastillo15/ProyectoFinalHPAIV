@@ -11,13 +11,12 @@ import android.hardware.SensorManager;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.Toast;
 
 public class ProximitySensor extends AppCompatActivity {
 
-    private SensorManager sm;
-    private Sensor PROXSensor;
-    private SensorEventListener PROXSensorListener;
+    SensorManager sm;
+    Sensor PROXSensor;
+    SensorEventListener PROXSensorListener;
     Button rgrsar;
 
 
@@ -38,9 +37,9 @@ public class ProximitySensor extends AppCompatActivity {
             }
         });
 
+
         if (PROXSensor == null) {
-            Toast.makeText(this, "This device hasn´t Proximity", Toast.LENGTH_SHORT).show();
-            finish();
+            getWindow().getDecorView().setBackgroundColor(Color.RED);
         }
 
         // Create a listener
@@ -59,7 +58,7 @@ public class ProximitySensor extends AppCompatActivity {
             public void onAccuracyChanged(Sensor sensor, int i) {
             }
         };
-}
+    }
     // Register the listener
     @Override
     protected void onResume() {

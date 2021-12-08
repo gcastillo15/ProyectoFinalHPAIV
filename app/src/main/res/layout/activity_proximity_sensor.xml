@@ -7,13 +7,17 @@
     tools:context=".ProximitySensor">
 
     <Button
-        android:id="@+id/botonregresar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="139dp"
-        android:layout_marginBottom="50dp"
+        android:id="@+id/btnregresar"
+        android:layout_width="192dp"
+        android:layout_height="51dp"
+        android:layout_marginStart="109dp"
+        android:layout_marginTop="508dp"
+        android:layout_marginEnd="110dp"
+        android:layout_marginBottom="43dp"
         android:text="Regresar"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
