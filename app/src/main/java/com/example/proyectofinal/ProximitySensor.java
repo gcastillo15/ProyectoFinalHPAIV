@@ -11,6 +11,7 @@ import android.hardware.SensorManager;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 
 public class ProximitySensor extends AppCompatActivity {
 
@@ -18,6 +19,7 @@ public class ProximitySensor extends AppCompatActivity {
     Sensor PROXSensor;
     SensorEventListener PROXSensorListener;
     Button rgrsar;
+    ImageView imagen;
 
 
     @Override
@@ -28,6 +30,7 @@ public class ProximitySensor extends AppCompatActivity {
         sm = (SensorManager) getSystemService(SENSOR_SERVICE);
         PROXSensor= sm.getDefaultSensor(Sensor.TYPE_PROXIMITY);
         rgrsar = findViewById(R.id.btnregresar);
+        imagen = findViewById(R.id.imageView);
 
         rgrsar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -47,11 +50,11 @@ public class ProximitySensor extends AppCompatActivity {
             @Override
             public void onSensorChanged(SensorEvent sensorEvent) {
                 if(sensorEvent.values[0] < PROXSensor.getMaximumRange()) {
-                    getWindow().getDecorView().setBackgroundColor(Color.BLUE);
+                    imagen.setImageResource(R.drawable.cerca);
 
                 }
                 else  {
-                    getWindow().getDecorView().setBackgroundColor(Color.YELLOW);
+                    imagen.setImageResource(R.drawable.white);
                 }
             }
             @Override
