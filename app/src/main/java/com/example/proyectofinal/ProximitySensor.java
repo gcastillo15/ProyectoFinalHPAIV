@@ -12,6 +12,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 public class ProximitySensor extends AppCompatActivity {
 
@@ -20,6 +21,7 @@ public class ProximitySensor extends AppCompatActivity {
     SensorEventListener PROXSensorListener;
     Button rgrsar;
     ImageView imagen;
+    TextView txt;
 
 
     @Override
@@ -31,6 +33,7 @@ public class ProximitySensor extends AppCompatActivity {
         PROXSensor= sm.getDefaultSensor(Sensor.TYPE_PROXIMITY);
         rgrsar = findViewById(R.id.btnregresar);
         imagen = findViewById(R.id.imageView);
+        txt =findViewById(R.id.txt1);
 
         rgrsar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -51,10 +54,12 @@ public class ProximitySensor extends AppCompatActivity {
             public void onSensorChanged(SensorEvent sensorEvent) {
                 if(sensorEvent.values[0] < PROXSensor.getMaximumRange()) {
                     imagen.setImageResource(R.drawable.cerca);
+                    txt.setText("Cerca");
 
                 }
                 else  {
                     imagen.setImageResource(R.drawable.white);
+                    txt.setText("Lejos");
                 }
             }
             @Override

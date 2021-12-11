@@ -12,6 +12,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
+import android.widget.TextView;
 
 import com.example.proyectofinal.MainActivity;
 import com.example.proyectofinal.R;
@@ -22,6 +23,7 @@ public class GyroscopeSensor extends AppCompatActivity {
     private Sensor gyroscopeSensor;
     private SensorEventListener gyroscopeSensorListener;
     Button regresar;
+    TextView txt;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +33,7 @@ public class GyroscopeSensor extends AppCompatActivity {
         sm = (SensorManager) getSystemService(SENSOR_SERVICE);
         gyroscopeSensor = sm.getDefaultSensor(Sensor.TYPE_GYROSCOPE);
         regresar = findViewById(R.id.btnregresar);
+        txt=findViewById(R.id.txt2);
 
         regresar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -51,11 +54,11 @@ public class GyroscopeSensor extends AppCompatActivity {
             public void onSensorChanged(SensorEvent sensorEvent) {
                 if(sensorEvent.values[2] > 0.5f) { // anticlockwise
                     getWindow().getDecorView().setBackgroundColor(Color.RED);
-                    //(IZQUIERDA)Toast.makeText(this, "Izquierda",Toast.LENGTH_SHORT).show();
+                    txt.setText("¡Rotación izquierda!");
 
                 } else if(sensorEvent.values[2] < -0.5f) { // clockwise
                     getWindow().getDecorView().setBackgroundColor(Color.GREEN);
-                    //(DERECHA) Toast.makeText(this, "DERECHA", Toast.LENGTH_SHORT).show();
+                    txt.setText("¡Rotación Derecha!");
                 }
             }
 
